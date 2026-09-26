@@ -2,8 +2,14 @@
   "name": "signal-language-server-037",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/server.js",
+  "bin": {
+    "sig-lsp": "dist/server.js"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js --stdio",
+    "test": "npm run build && node --test test/*.test.mjs"
   },
   "dependencies": {
     "vscode-languageserver": "9.0.1",
