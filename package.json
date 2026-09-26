@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "demo": "node scripts/demo-client.js",
+    "test": "npm run build && node --test test/*.test.js"
   },
   "dependencies": {
     "vscode-languageserver": "9.0.1",
